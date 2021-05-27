@@ -1,6 +1,6 @@
 int beautifulTriplets(int d, vector<int> arr)
 {
-    auto check = [&](int n)
+    auto check = [&arr](int n)
     {
         return std::binary_search(begin(arr), end(arr), n);
     };
