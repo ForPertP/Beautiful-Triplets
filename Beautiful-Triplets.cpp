@@ -30,3 +30,38 @@ int beautifulTriplets(int d, vector<int> arr)
     
     return result;
 }
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string first_multiple_input_temp;
+    getline(cin, first_multiple_input_temp);
+
+    vector<string> first_multiple_input = split(rtrim(first_multiple_input_temp));
+
+    int n = stoi(first_multiple_input[0]);
+
+    int d = stoi(first_multiple_input[1]);
+
+    string arr_temp_temp;
+    getline(cin, arr_temp_temp);
+
+    vector<string> arr_temp = split(rtrim(arr_temp_temp));
+
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; i++) {
+        int arr_item = stoi(arr_temp[i]);
+
+        arr[i] = arr_item;
+    }
+
+    int result = beautifulTriplets(d, arr);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
