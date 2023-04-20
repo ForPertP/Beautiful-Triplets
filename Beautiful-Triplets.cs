@@ -26,7 +26,8 @@ class Result
 
     public static int beautifulTriplets(int d, List<int> arr)
     {
-        Func<int, bool> check = n => arr.BinarySearch(n) >= 0;
+        Predicate<int> check = n => arr.BinarySearch(n) >= 0;
+        Func<int, bool> check2 = n => arr.BinarySearch(n) >= 0;
 
         int result = arr.Count(n => check(d + n) && check(2 * d + n));
 
