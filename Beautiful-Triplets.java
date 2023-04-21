@@ -33,7 +33,7 @@ class Result {
 
     public static int beautifulTriplets2(int d, List<Integer> arr) {
         Predicate<Integer> check = n -> Collections.binarySearch(arr, n) >= 0;
-        Function<Integer, Boolean> check2 = n -> Collections.binarySearch(arr, n) >= 0;
+        //Function<Integer, Boolean> check2 = n -> Collections.binarySearch(arr, n) >= 0;
 
         int result = 0;
         for (int n : arr) {
